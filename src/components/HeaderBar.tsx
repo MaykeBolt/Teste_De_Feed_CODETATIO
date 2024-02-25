@@ -4,36 +4,45 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-nat
 const HeaderBar = () => {
     return (
         <View style={style.header}>
-            <Image source={require('../../assets/icons/icons8-sheep-100.png')} style={style.img}/>
-            <Pressable style={style.button}> Drop </Pressable>
+            <Image source={require('../../assets/icons/BooPeep2.jpg')} style={style.icon}/>
+            <Pressable style={style.button}><Image source={require('../../assets/icons/icons8-pesquisar-64.png')} style={style.img} /></Pressable>
         </View>
     )
 }
 
 const style = StyleSheet.create ({
     header: {
-        // flex: 2,
-        backgroundColor: "#caffad",
+        backgroundColor: "#d4d7ff",
         height: hp(10),
         width: wp(102),
         
         flexDirection: "row",
-        alignItems: "center"
+        alignItems: "center",
+
+        borderBottomColor: "#0000001a",
+        borderBottomWidth: wp(0.9),
         
     },
     button: {
-        backgroundColor: "slateblue",
-        width: wp(30),
-        height: hp(5),
-        marginHorizontal: hp(2),
+        //backgroundColor: "slateblue",
+        width: wp(2),
+        height: hp(2),
         borderRadius: 5,
+        marginHorizontal: wp(10),
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        position: "absolute",
+        right: 0
     },
     img: {
-        width: wp(10),
-        height: hp(10),
+        width: 50,
+        height: 50,
         marginLeft: wp(2)
+    },
+    icon: {
+        width: 140,
+        height: 50,
+        marginLeft: wp(1),
     }
 })
 

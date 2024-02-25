@@ -9,7 +9,7 @@ const {height, width} = Dimensions.get('window');
 export default function App() {
   return (
     <SafeAreaView style={style.root}>
-      <Text>Raiz do projeto.</Text>
+      {/*<Text>Raiz do projeto.</Text>*/}
       <HeaderBar />
       <Feed />
       <FooterBar />
