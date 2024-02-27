@@ -9,18 +9,16 @@ const {height, width} = Dimensions.get('window');
 export default function App() {
   return (
     <SafeAreaView style={style.root}>
-      {/*<Text>Raiz do projeto.</Text>*/}
-      <HeaderBar />
-      <Feed />
-      <FooterBar />
+      <Feed />   
     </SafeAreaView>
   );
 }
 
 const style = StyleSheet.create ({
   root: {
-    flex: 1,
-    backgroundColor: "#ffd4ad",
+    //flex: 1,
+    //backgroundColor: "#ffd4ad",
+    //backgroundColor: "red",
   }
 });
 

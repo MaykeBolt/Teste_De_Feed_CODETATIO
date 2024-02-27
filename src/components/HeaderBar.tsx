@@ -1,20 +1,23 @@
-import { StyleSheet, Image, View, Pressable } from "react-native";
+import {Image, View, Pressable } from "react-native";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import StyleSheet from 'react-native-media-query';
+import { ids } from "./HeaderBarResponsivity";
 
 const HeaderBar = () => {
     return (
-        <View style={style.header}>
-            <Image source={require('../../assets/icons/BooPeep2.jpg')} style={style.icon}/>
-            <Pressable style={style.button}><Image source={require('../../assets/icons/icons8-pesquisar-64.png')} style={style.img} /></Pressable>
+        <View style={styles.header} dataSet={{media: ids.header}}>
+        <Image source={require('../../assets/icons/BooPeep2.jpg')} style={styles.icon} />
+            <Pressable style={styles.button} dataSet={{media: ids.button}}><Image source={require('../../assets/icons/icons8-pesquisar-64.png')} style={styles.img} /></Pressable>
         </View>
     )
 }
 
-const style = StyleSheet.create ({
+const {styles} = StyleSheet.create ({
     header: {
+        flex: 1,
         backgroundColor: "#d4d7ff",
-        height: hp(10),
-        width: wp(102),
+        height: hp(12),
+        width: wp(100),
         
         flexDirection: "row",
         alignItems: "center",
@@ -28,7 +31,6 @@ const style = StyleSheet.create ({
         width: wp(2),
         height: hp(2),
         borderRadius: 5,
-        marginHorizontal: wp(10),
         justifyContent: "center",
         alignItems: "center",
         position: "absolute",
@@ -37,12 +39,13 @@ const style = StyleSheet.create ({
     img: {
         width: 50,
         height: 50,
-        marginLeft: wp(2)
     },
     icon: {
         width: 140,
         height: 50,
         marginLeft: wp(1),
+        marginTop: hp(2),
+        marginBottom: hp(2),
     }
 })
 
